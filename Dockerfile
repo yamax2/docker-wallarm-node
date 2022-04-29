@@ -14,12 +14,14 @@ RUN printf -- "mQINBGIMrcABEAC6Eiq7wvDFie+y6P8e8rRxXlmpOh7FP4NwyR+XAoANbztuZMZO2
         supervisor \
         nginx \
         wallarm-node \
+        wallarm-node-nginx \
         libnginx-mod-http-wallarm \
         collectd-utils \
         curl \
         iptables \
         bsdmainutils \
         sudo \
+        wallarm-common ruby-wallarm-rest-client ruby-wallarm-api ruby-proton \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && chown -R wallarm:wallarm /var/lib/wallarm-tarantool
